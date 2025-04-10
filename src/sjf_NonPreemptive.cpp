@@ -1,8 +1,8 @@
 #include "../include/SJF_NonPreemptive.h"
 
-
+// Implementation of constructor
 SJF_NonPreemptive::SJF_NonPreemptive() : Scheduler() {
-    
+    // Constructor body (can be empty)
 }
 
 void SJF_NonPreemptive::addProcess(process p, int time) {
