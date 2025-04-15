@@ -12,7 +12,7 @@ void SJF_NonPreemptive::addProcess(process p, int time) {
 
 void SJF_NonPreemptive::beginOperation(int time) {
     // If no process is currently running, select the next one
-    if (!currentProcess.getPid()) {
+    if (!currentProcess.getRemainingTime()) {
         if (!readyQueue.empty()) {
             // Find process with shortest burst time that has arrived
             auto it = min_element(readyQueue.begin(), readyQueue.end(),
@@ -35,7 +35,6 @@ void SJF_NonPreemptive::beginOperation(int time) {
         if (currentProcess.getRemainingTime() == 0) {
             currentProcess.setCompletionTime(time + 1);
             getCompletedProcesses().push_back(currentProcess);
-            currentProcess = process(); // Reset to empty process
         }
     }
 }
