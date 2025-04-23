@@ -7,7 +7,7 @@ using namespace std;
 class FCFS_Scheduler : public Scheduler{
 private:
   queue<process> processQueue;
-
+    bool isrunning=0;
 public:
   FCFS_Scheduler();
 

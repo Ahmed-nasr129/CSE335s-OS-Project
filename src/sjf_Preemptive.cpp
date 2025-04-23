@@ -24,13 +24,14 @@ void SJF_Preemptive::beginOperation(int time) {
             current.setStartTime(time);
         }
         
-        setCurrentProcess(current);
+
         current.setRemainingTime(current.getRemainingTime() - 1);
-        
+
         if (current.getRemainingTime() == 0) {
             current.setCompletionTime(time + 1); // +1 because it completes at the end of this time unit
             getCompletedProcesses().push_back(current);
             readyQueue.erase(it);
         }
+        setCurrentProcess(current);
     }
 }
