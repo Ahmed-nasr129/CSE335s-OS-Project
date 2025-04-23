@@ -30,7 +30,9 @@ A GUI desktop application that simulates various CPU scheduling algorithms with 
 - C++17 compatible compiler (g++/MinGW or MSVC)
 - Qt 5.15+ (for GUI version)
 - CMake 3.12+
-
+### Executable File
+- https://drive.google.com/drive/folders/1mZ2TT6m8Tq6w3YP7YBOvDgycVzBo-NBc?usp=drive_link
+  
 ## **Support**
 
 If you encounter any issues or have questions about this project:  
